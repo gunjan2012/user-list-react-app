@@ -1,0 +1,137 @@
+body {
+  background-color: #d5dff7;
+  font-family: Poppins,sans-serif;
+}
+
+.main-container{
+  display: flex;
+  border-radius: 1rem;
+  margin-top: 2rem;
+  background-color: white;
+  box-shadow: 0 0 2.5rem 0 #87A0CE;
+}
+/*Bootstrap Table element has created this class named element which is visible in browser console */
+.table-responsive{
+  padding: 1rem;
+  overflow: auto;
+  width: 60%;
+}
+
+.table-responsive::-webkit-scrollbar{
+  height: 0.3rem;
+}
+.table-responsive::-webkit-scrollbar-thumb:horizontal{
+  background: #87A0CE;
+  border-radius: 1rem;
+}
+
+.content-alignment{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-header{
+  font-size: 1.3rem;
+}
+
+.status-selector{
+  width: fit-content;
+  background-color: #f3f6fc;
+}
+
+.user-status{
+  color:#48c39a;
+  font-size: 1rem;
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}
+
+.user-detail-card{
+  height: 30rem;
+  margin: auto;
+  padding: 2rem;
+  width: 20rem;
+  background-color: white;
+  border-radius: 2.5rem;
+  box-shadow: 0 0 2.5rem 0 #87A0CE;
+}
+
+.card-user-name{
+  display: flex;
+  justify-content: center;
+}
+
+.progress-background{
+  border-radius: 1.8rem;
+  background: rgb(251, 227, 156);
+}
+
+.progress-bar {
+  height: 0.5rem;
+  border-radius: 1.8rem;
+  background: none;
+  animation: animate-progress 1s linear forwards;
+}
+
+@keyframes animate-progress {
+  from {
+    width: 0%;
+  }
+  to{
+    width: calc((100% / 100) * var(--progress));
+  }
+}
+
+.verticle-line{
+  border: 1px solid rgb(195, 195, 195);
+  height: 3.4rem;
+  margin-top: 0.5rem;
+}
+
+.dot{
+  margin-left: 0.2rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: #38c53a;
+  border-radius: 50%;
+}
+
+/* tablet view */
+@media (max-width:767px){
+  #root{
+    font-size: 0.9rem;
+  }
+  .table-responsive{
+    width: 50%;
+  }
+  .user-detail-card{
+    width: 50%;
+    height: 80%;
+  }
+  .card-user-name{
+    font-size : 0.8rem;
+  }
+  .rounded-circle{
+    width: 6rem;
+  }
+}
+
+/* mobile view */
+@media (max-width:425px){
+  .main-container{
+    flex-direction: column;
+    width: 90%;
+    height: 50rem;
+  }
+  .table-responsive{
+    width: 100%;
+    height: 40%;
+  }
+  .user-detail-card{
+    width: 80%;
+    height: 55%;
+  }
+}
